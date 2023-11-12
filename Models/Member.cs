@@ -10,7 +10,7 @@ namespace Supuran_Alex_Lab2.Models
         public string? Adress { get; set; }
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         public string? Phone { get; set; }
         [Display(Name = "Full Name")]
         public string? FullName

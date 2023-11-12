@@ -30,14 +30,14 @@ namespace Supuran_Alex_Lab2.Pages.Borrowings
                 return NotFound();
             }
 
-            var borrowing =  await _context.Borrowing.FirstOrDefaultAsync(m => m.ID == id);
+            var borrowing = await _context.Borrowing.FirstOrDefaultAsync(m => m.ID == id);
             if (borrowing == null)
             {
                 return NotFound();
             }
             Borrowing = borrowing;
-           ViewData["BookID"] = new SelectList(_context.Book, "ID", "ID");
-           ViewData["MemberID"] = new SelectList(_context.Member, "ID", "ID");
+            ViewData["BookID"] = new SelectList(_context.Book, "ID", "Title");
+            ViewData["MemberID"] = new SelectList(_context.Member, "ID", "FullName");
             return Page();
         }
 
