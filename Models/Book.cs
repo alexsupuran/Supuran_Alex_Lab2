@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using Supuran_Alex_Lab2.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Policy;
 
@@ -17,6 +19,8 @@ namespace Supuran_Alex_Lab2.Models
         public DateTime PublishingDate { get; set; }
         public int? PublisherID { get; set; }
         public Publisher? Publisher { get; set; }
+        public Borrowing? Borrowing { get; set; }
         public ICollection<BookCategory>? BookCategories { get; set; }
     }
+    
 }
